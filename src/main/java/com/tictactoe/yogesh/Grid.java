@@ -13,7 +13,7 @@ public class Grid {
         String grid = "";
 
         for(int i = 0; i < size; i++){
-            grid += "__|__|__\n";
+            grid += "  |  |  \n________\n";
         }
 
         print(grid);

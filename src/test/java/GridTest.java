@@ -19,9 +19,8 @@ class GridTest {
 
         String expected = "";
         for(int i = 0; i < 3; i++){
-            expected += "__|__|__\n";
+            expected += "  |  |  \n________\n";
         }
         assertEquals(expected, outContent.toString());
     }
-
 }
