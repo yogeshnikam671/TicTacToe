@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ReaderTest {
     @Test
-    void shouldBeAbleToTakeInputFromUser() {
-        String Actual = "Yogesh";
+    void shouldBeAbleToTakeInputFromUser() throws InvalidInputException {
+        String Actual = "X";
         InputStream in = new ByteArrayInputStream(Actual.getBytes());
         System.setIn(in);
 
@@ -19,6 +19,17 @@ class ReaderTest {
 
         reader.input();
 
-        assertEquals("Yogesh", Actual);
+        assertEquals("X", Actual);
+    }
+
+    @Test
+    void shouldBeAbleThrowExceptionWhenInputIsNotValid() throws InvalidInputException {
+        String Actual = "Yogesh";
+        InputStream in = new ByteArrayInputStream(Actual.getBytes());
+        System.setIn(in);
+
+        Reader reader = new Reader();
+
+        assertThrows(InvalidInputException.class, reader::input);
     }
 }
