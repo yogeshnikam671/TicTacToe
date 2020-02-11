@@ -18,7 +18,7 @@ public class Reader {
     }
 
     private boolean isValid(String inputValue){
-        if(inputValue.equals("X") || inputValue.equals("Y"))
+        if(inputValue.equals("X") || inputValue.equals("O"))
             return true;
         return false;
     }

@@ -59,18 +59,18 @@ class GridTest {
     }
 
     @Test
-    void shouldBeAbleToReflectTheInputYTakenByUserInTheGrid() {
+    void shouldBeAbleToReflectTheInputOTakenByUserInTheGrid() {
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
         Grid grid = new Grid();
-        grid.fill("Y", new Position(0, 2));
+        grid.fill("O", new Position(0, 2));
 
         grid.display();
 
         String expected = "";
 
-        expected += " | |Y|\n________\n";
+        expected += " | |O|\n________\n";
 
         int index = 1;
         while (index < 3) {
