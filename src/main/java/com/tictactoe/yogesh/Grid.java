@@ -1,7 +1,11 @@
+package com.tictactoe.yogesh;
+
+import static com.tictactoe.yogesh.Printer.*;
+
 public class Grid {
     int size;
 
-    Grid(){
+    public Grid(){
         size = 3;
     }
 
@@ -12,6 +16,6 @@ public class Grid {
             grid += "__|__|__\n";
         }
 
-        System.out.print(grid);
+        print(grid);
     }
 }
