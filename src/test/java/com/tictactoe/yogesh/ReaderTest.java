@@ -45,4 +45,18 @@ class ReaderTest {
 
         assertEquals("X", actual);
     }
+
+    @Test
+    void shouldBeAbleToTakeNumbersAsInput() {
+        String expectedNumber = "0";
+        InputStream in = new ByteArrayInputStream(expectedNumber.getBytes());
+        System.setIn(in);
+
+        Reader reader = new Reader();
+
+        int actualNumber = reader.inputPosition();
+
+        assertEquals(expectedNumber , actualNumber + "");
+    }
+
 }
