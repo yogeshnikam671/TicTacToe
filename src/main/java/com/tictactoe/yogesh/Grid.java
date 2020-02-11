@@ -3,9 +3,9 @@ package com.tictactoe.yogesh;
 import static com.tictactoe.yogesh.Printer.*;
 
 public class Grid {
-    int size;
-    String[][] gridField;
-    String grid;
+    private int size;
+    private String[][] gridField;
+    private String grid;
 
     public Grid() {
         size = 3;

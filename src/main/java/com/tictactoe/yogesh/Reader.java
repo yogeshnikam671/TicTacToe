@@ -2,10 +2,8 @@ package com.tictactoe.yogesh;
 
 import java.util.Scanner;
 
-import static com.tictactoe.yogesh.Printer.*;
-
 public class Reader {
-    Scanner scanner;
+    private Scanner scanner;
 
     Reader(){
         scanner = new Scanner(System.in);
