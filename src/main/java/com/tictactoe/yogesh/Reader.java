@@ -2,6 +2,8 @@ package com.tictactoe.yogesh;
 
 import java.util.Scanner;
 
+import static com.tictactoe.yogesh.Printer.*;
+
 public class Reader {
     Scanner scanner;
 
@@ -17,13 +19,30 @@ public class Reader {
         return inputValue;
     }
 
+
+    public int inputPosition() throws InvalidInputException {
+        int inputPosition;
+        try{
+            inputPosition = scanner.nextInt();}
+        catch(NumberFormatException e){
+            throw new InvalidInputException();
+        }
+
+        if(!isValid(inputPosition))
+            throw new InvalidInputException();
+
+        return inputPosition;
+    }
+
     private boolean isValid(String inputValue){
         if(inputValue.equals("X") || inputValue.equals("O"))
             return true;
         return false;
     }
 
-    public int inputPosition() {
-        return scanner.nextInt();
+    private boolean isValid(int inputPosition){
+        if(inputPosition < 1 || inputPosition > 9)
+            return false;
+        return true;
     }
 }

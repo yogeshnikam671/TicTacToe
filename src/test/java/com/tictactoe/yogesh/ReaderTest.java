@@ -47,8 +47,8 @@ class ReaderTest {
     }
 
     @Test
-    void shouldBeAbleToTakeNumbersAsInput() {
-        String expectedNumber = "0";
+    void shouldBeAbleToTakeNumbersAsInput() throws InvalidInputException {
+        String expectedNumber = "3";
         InputStream in = new ByteArrayInputStream(expectedNumber.getBytes());
         System.setIn(in);
 
@@ -59,4 +59,14 @@ class ReaderTest {
         assertEquals(expectedNumber , actualNumber + "");
     }
 
+    @Test
+    void shouldBeAbleToThrowExceptionWhenThePositionIsInvalid() {
+        String Actual = "Yogesh";
+        InputStream in = new ByteArrayInputStream(Actual.getBytes());
+        System.setIn(in);
+
+        Reader reader = new Reader();
+
+        assertThrows(InvalidInputException.class, reader::inputValue);
+    }
 }
