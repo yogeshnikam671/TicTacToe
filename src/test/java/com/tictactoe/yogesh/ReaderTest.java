@@ -32,4 +32,17 @@ class ReaderTest {
 
         assertThrows(InvalidInputException.class, reader::input);
     }
+
+    @Test
+    void shouldBeAbleToReturnTheInputtedString() throws InvalidInputException {
+        String Actual = "X";
+        InputStream in = new ByteArrayInputStream(Actual.getBytes());
+        System.setIn(in);
+
+        Reader reader = new Reader();
+
+        String actual = reader.input();
+
+        assertEquals("X", actual);
+    }
 }

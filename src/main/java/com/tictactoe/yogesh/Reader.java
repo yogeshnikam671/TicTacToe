@@ -9,10 +9,12 @@ public class Reader {
         scanner = new Scanner(System.in);
     }
 
-    public void input() throws InvalidInputException {
+    public String input() throws InvalidInputException {
         String inputValue = scanner.next();
         if(!isValid(inputValue))
             throw new InvalidInputException();
+
+        return inputValue;
     }
 
     private boolean isValid(String inputValue){
