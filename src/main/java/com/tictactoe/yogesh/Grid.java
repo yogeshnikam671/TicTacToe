@@ -1,5 +1,8 @@
 package com.tictactoe.yogesh;
 
+import java.util.List;
+
+import static com.tictactoe.yogesh.Position.*;
 import static com.tictactoe.yogesh.Printer.*;
 
 public class Grid {
@@ -28,9 +31,11 @@ public class Grid {
         print(grid);
     }
 
-    public void fill(String input, Position position) {
+    public void fill(String input, int position) {
 
-        gridField[position.getX()][position.getY()] = input;
+        List<Integer> XYList = getPosition(position).getXY();
+
+        gridField[XYList.get(0)][XYList.get(1)] = input;
     }
 
     private void initializeStrings() {

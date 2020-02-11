@@ -1,3 +1,5 @@
+package com.tictactoe.yogesh;
+
 import com.tictactoe.yogesh.Grid;
 import com.tictactoe.yogesh.Position;
 import com.tictactoe.yogesh.Reader;
@@ -38,7 +40,7 @@ class GridTest {
         System.setOut(new PrintStream(outContent));
 
         Grid grid = new Grid();
-        grid.fill("X", new Position(0, 0));
+        grid.fill("X", 1);
 
         grid.display();
 
@@ -64,7 +66,7 @@ class GridTest {
         System.setOut(new PrintStream(outContent));
 
         Grid grid = new Grid();
-        grid.fill("O", new Position(0, 2));
+        grid.fill("O", 3);
 
         grid.display();
 
