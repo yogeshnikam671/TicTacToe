@@ -9,7 +9,7 @@ public class Reader {
         scanner = new Scanner(System.in);
     }
 
-    public String input() throws InvalidInputException {
+    public String inputValue() throws InvalidInputException {
         String inputValue = scanner.next();
         if(!isValid(inputValue))
             throw new InvalidInputException();

@@ -17,7 +17,7 @@ class ReaderTest {
 
         Reader reader = new Reader();
 
-        reader.input();
+        reader.inputValue();
 
         assertEquals("X", Actual);
     }
@@ -30,7 +30,7 @@ class ReaderTest {
 
         Reader reader = new Reader();
 
-        assertThrows(InvalidInputException.class, reader::input);
+        assertThrows(InvalidInputException.class, reader::inputValue);
     }
 
     @Test
@@ -41,7 +41,7 @@ class ReaderTest {
 
         Reader reader = new Reader();
 
-        String actual = reader.input();
+        String actual = reader.inputValue();
 
         assertEquals("X", actual);
     }
